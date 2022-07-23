@@ -3,3 +3,7 @@ title: El Pollito Marihuano
 description: Análisis de la red social twitter enfocado al tema de política en México.
 logo: /assets/img/logo.jpg
 show_downloads: false
+
+github_button_location_top_navbar: false
+github_button_location_below_title: false
+github_button_location_page_bottom: false
