@@ -16,7 +16,7 @@ Hans2412
 VicenteFoxQue
 rynram
 
-![red](/assets/img/posts/2022-07-23/net.jpg)
+![red](https://pbs.twimg.com/media/FYb0korXoAEsHh3?format=jpg)
 
 Análisis del comportamiento temporal de publicación de Tweets.
 
