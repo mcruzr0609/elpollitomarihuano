@@ -24,17 +24,19 @@ categories: analisis
       </div>
     </div>
   </section>
+<br>
+<br>
 
-Número de tweets: 153554
-Número de nodos: 81838 [550]
-Número de enlaces: 233269 [3805]
+Número de tweets: 153554 \
+Número de nodos: 81838 [550] \
+Número de enlaces: 233269 [3805] \
 
 Top:
-1.  lopezobrador_
-1.  Claudiashein
-1.  Hans2412
-1.  VicenteFoxQue
-1.  rynram
+1.  [@lopezobrador_](https://twitter.com/lopezobrador_)
+1.  [@lopezobrador_](https://twitter.com/Claudiashein)
+1.  [@Hans2412](https://twitter.com/Hans2412)
+1.  [@VicenteFoxQue](https://twitter.com/VicenteFoxQue)
+1.  [@rynram](https://twitter.com/rynram)
 
 Análisis del comportamiento temporal de publicación de Tweets.
 
@@ -50,18 +52,18 @@ Palabras más frecuentes.
 
 Usuarios que más publicaron.
 
-1.  SinEmbargoMX
-1.  ZuritaCarpio
-1.  TatsumiJorge
-1.  ELBOTE
-1.  AntilopeMalo
-1.  octaviorabago
-1.  inkertatis
-1.  lopezdoriga
-1.  mario_dico50
-1.  sinnosotrosnoh1
-1.  lajornadaonline
-1.  AaronCo12297111
+1.  [@SinEmbargoMX](https://twitter.com/SinEmbargoMX)
+1.  [@ZuritaCarpio](https://twitter.com/ZuritaCarpio)
+1.  [@TatsumiJorge](https://twitter.com/TatsumiJorge)
+1.  [@ELBOTE](https://twitter.com/ELBOTE)
+1.  [@AntilopeMalo](https://twitter.com/AntilopeMalo)
+1.  [@octaviorabago](https://twitter.com/octaviorabago)
+1.  [@inkertatis](https://twitter.com/inkertatis)
+1.  [@lopezdoriga](https://twitter.com/lopezdoriga)
+1.  [@mario_dico50](https://twitter.com/mario_dico50)
+1.  [@sinnosotrosnoh1](https://twitter.com/sinnosotrosnoh1)
+1.  [@lajornadaonline](https://twitter.com/lajornadaonline)
+1.  [@AaronCo12297111](https://twitter.com/AaronCo12297111)
 
 
 
