@@ -16,19 +16,19 @@ Hans2412
 VicenteFoxQue
 rynram
 
-![red](/assets/img/posts/2022-07-24/net.jpg)
+![red](/assets/img/posts/2022-07-23/net.jpg)
 
 Análisis del comportamiento temporal de publicación de Tweets.
 
-![temporal](/assets/img/posts/2022-07-24/temporal.jpg)
+![temporal](/assets/img/posts/2022-07-23/temporal.jpg)
 
 Hashtags más frecuentes.
 
-![hashtags](/assets/img/posts/2022-07-24/hashtags.jpg)
+![hashtags](/assets/img/posts/2022-07-23/hashtags.jpg)
 
 Palabras más frecuentes.
 
-![hashtags](/assets/img/posts/2022-07-24/words.jpg)
+![words](/assets/img/posts/2022-07-23/words.jpg)
 
 Usuarios que más publicaron.
 
