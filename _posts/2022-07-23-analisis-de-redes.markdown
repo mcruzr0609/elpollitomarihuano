@@ -16,11 +16,11 @@ Hans2412
 VicenteFoxQue
 rynram
 
-![red](https://pbs.twimg.com/media/FYb0korXoAEsHh3?format=jpg)
+![red](../assets/img/posts/2022-07-23/net.jpg)
 
 Análisis del comportamiento temporal de publicación de Tweets.
 
-![temporal](../../assets/img/posts/2022-07-23/temporal.jpg)
+![temporal](../assets/img/posts/2022-07-23/temporal.jpg)
 
 Hashtags más frecuentes.
 
