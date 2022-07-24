@@ -10,11 +10,11 @@ Número de nodos: 81838 [550]
 Número de enlaces: 233269 [3805]
 
 Top:
-lopezobrador_
-Claudiashein
-Hans2412
-VicenteFoxQue
-rynram
+1.  lopezobrador_
+1.  Claudiashein
+1.  Hans2412
+1.  VicenteFoxQue
+1.  rynram
 
 ![red](../assets/img/posts/2022-07-23/net.jpg)
 
@@ -24,23 +24,23 @@ Análisis del comportamiento temporal de publicación de Tweets.
 
 Hashtags más frecuentes.
 
-![hashtags](/assets/img/posts/2022-07-23/hashtags.jpg)
+![hashtags](../assets/img/posts/2022-07-23/hashtags.jpg)
 
 Palabras más frecuentes.
 
-![words](/assets/img/posts/2022-07-23/words.jpg)
+![words](../assets/img/posts/2022-07-23/words.jpg)
 
 Usuarios que más publicaron.
 
-SinEmbargoMX
-ZuritaCarpio
-TatsumiJorge
-ELBOTE
-AntilopeMalo
-octaviorabago
-inkertatis
-lopezdoriga
-mario_dico50
-sinnosotrosnoh1
-lajornadaonline
-AaronCo12297111
+1.  SinEmbargoMX
+1.  ZuritaCarpio
+1.  TatsumiJorge
+1.  ELBOTE
+1.  AntilopeMalo
+1.  octaviorabago
+1.  inkertatis
+1.  lopezdoriga
+1.  mario_dico50
+1.  sinnosotrosnoh1
+1.  lajornadaonline
+1.  AaronCo12297111
