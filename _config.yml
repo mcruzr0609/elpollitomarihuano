@@ -8,4 +8,4 @@ github_button_location_below_title: false
 github_button_location_page_bottom: false
 
 markdown: kramdown
-permalink: /:year/:title:output_ext
+permalink: /:year/:month/:day/:title:output_ext
