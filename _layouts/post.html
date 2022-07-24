@@ -8,6 +8,249 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
+  <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+  <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.min_.js"></script>
+  <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.parsers.gexf_.min_.js"></script>
+  <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.renderers.parallelEdges.min_.js"></script>
+  
+  <section class="node-container">
+    <div id="graph-container" class="nodes" style="width:100%;">
+      <div id="selected-nodes"></div>
+      <div class="node-controls">
+        <div class="search-container">
+        <input id="search-input" list="nodes-datalist" placeholder="Search for a node">
+      </div>
+      <datalist id="nodes-datalist"></datalist>
+        <button type="button" id="zoom-in-button" class="zoom-button zoom-in">+</button>
+        <button type="button" id="zoom-out-button" class="zoom-button zoom-out">-</button>
+      </div>
+    </div>
+  </section>
+  
+  
+  <style> 
+  .node-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+    height: 600px;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .node-container {
+      flex-direction: row;
+      padding: 0 50px;
+    }
+  }
+  
+  .node-container #context-container {
+    flex: 1;
+    color: #dffcff;
+    background-color: #222a2a;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .node-container #context-container h4 {
+    margin-top: 0;
+  }
+  
+  .node-container #context-container .simplebar-scrollbar:before {
+    background-color: #fff;
+  }
+  
+  .node-container #context-container #context-wrapper {
+    max-height: 85vh;
+    padding: 20px;
+  }
+  
+  .node-container .simplebar-vertical {
+    margin: 10px 5px;
+  }
+  
+  .node-container .nodes {
+    flex: 2;
+  }
+  
+  .node-container #graph-container .node-controls {
+    display: flex;
+    flex-direction: column;
+    float: right;
+  }
+  .node-container #graph-container .search-container {
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    display: block;
+    z-index: 10;
+    color: #222a2a;
+    overflow: hidden;
+    height: 34px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .node-container #graph-container input {
+    color: #222a2a;
+    border: none;
+    height: 34px;
+    position: relative;
+    padding: 0 10px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .node-container #selected-nodes {
+    position: absolute;
+    z-index: 10;
+    padding-top: 40px;
+  }
+  @media only screen and (min-width: 600px) {
+    .node-container #selected-nodes {
+      padding-top: 0px;
+    }
+  }
+  
+  .node-container #selected-nodes .selected-node {
+    background-color: #222a2a;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 5px;
+    color: #fff;
+  }
+  
+  .node-container .zoom-button {
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    color: #222a2a;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #222a2a;
+    align-self: flex-end;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .node-container .zoom-button:hover {
+    color: #2e3838;
+    background-color: #dffcff;
+  }
+  
+  </style>
+  
+  <script>
+  var selected = [];
+  
+    MiniBarOptions = {
+      barType: "default",
+      minBarSize: 100,
+      alwaysShowBars: true,
+    };
+  
+    sigma.classes.graph.addMethod('neighbors', function (nodeId) {
+      var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
+  
+      for (k in index)
+        neighbors[k] = this.nodesIndex[k];
+  
+      return neighbors;
+    });
+  
+  // Initialise sigma with settings
+    var s = new sigma({
+      renderers: [
+        {
+          type: 'canvas',
+          container: document.getElementById('graph-container'),
+          freeStyle: true
+        }
+      ],
+      settings: {
+        minNodeSize: .1,
+        maxNodeSize: 5,
+        minEdgeSize: 0.1,
+        maxEdgeSize: 0.5,
+        defaultEdgeType: "curve", // only works on canvas renderer
+        minArrowSize: 3,
+        //labelColor: "node",
+        labelHoverBGColor: "default",
+        defaultHoverLabelBGColor: "#171c1c",
+        defaultLabelHoverColor: "#fff",
+        font: "Poppins",
+        drawLabels: true,
+        mouseWheelEnabled: true,
+        doubleClickEnabled: true,
+        touchEnabled: true,
+        labelThreshold: 3
+      },
+    });
+  
+  // Load data to the graph
+      sigma.parsers.gexf('../asseets/posts/{{ page.date | date: "%Y-%m-%d" }}/net.gexf', s,
+        function (s) {
+          s.refresh();
+          populateSearchList(s.graph.nodes());
+  
+          // Add event listeners to buttons
+          var inputBox = document.getElementById('search-input');
+          inputBox.addEventListener("change", searchChange);
+  
+          var zoomInButton = document.getElementById('zoom-in-button');
+          zoomInButton.addEventListener("click", zoomIn);
+          var zoomOutButton = document.getElementById('zoom-out-button');
+          zoomOutButton.addEventListener("click", zoomOut);
+        });
+  
+  function searchChange(e) {
+        var value = e.target.value;
+  
+        // Add node to selected
+        s.graph.nodes().forEach(function (n) {
+          if (n.label == value) {
+            if (!selected[n.id]) {
+              selected[n.id] = n;
+            }
+          }
+        });
+      }
+  
+      function zoomIn() {
+        var c = s.camera;
+        c.goTo({
+          ratio: c.ratio / c.settings('zoomingRatio')
+        });
+      }
+  
+      function zoomOut() {
+        var c = s.camera;
+        c.goTo({
+          ratio: c.ratio * c.settings('zoomingRatio')
+        });
+      }
+  
+      function populateSearchList(nodes) {
+        var container = document.getElementById('nodes-datalist');
+        nodes.forEach(function (n) {
+          var item = document.createElement('option');
+          item.value = n.label;
+          container.appendChild(item);
+        });
+      }
+  
+  </script>
+
+
+
+
   <article class="post-content">
     {{ content }}
   </article>

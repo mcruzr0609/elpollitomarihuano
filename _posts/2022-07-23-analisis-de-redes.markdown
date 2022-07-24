@@ -16,19 +16,19 @@ Top:
 1.  VicenteFoxQue
 1.  rynram
 
-![red](../assets/img/posts/2022-07-23/net.jpg){: width="200%" }
+![red](../asseets/posts/{{ page.date | date: "%Y-%m-%d" }}/net.jpg){: width="200%" }
 
 Análisis del comportamiento temporal de publicación de Tweets.
 
-![temporal](../assets/img/posts/2022-07-23/temporal.jpg)
+![temporal](../asseets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
 
 Hashtags más frecuentes.
 
-![hashtags](../assets/img/posts/2022-07-23/hashtags.jpg)
+![hashtags](../asseets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
 
 Palabras más frecuentes.
 
-![words](../assets/img/posts/2022-07-23/words.jpg)
+![words](../asseets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
 
 Usuarios que más publicaron.
 
