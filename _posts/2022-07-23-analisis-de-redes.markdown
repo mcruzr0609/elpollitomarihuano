@@ -25,7 +25,6 @@ categories: analisis
     </div>
   </section>
 <br>
-<br>
 
 Número de tweets: 153554 \
 Número de nodos: 81838 [550] \
@@ -33,24 +32,24 @@ Número de enlaces: 233269 [3805] \
 
 Top:
 1.  [@lopezobrador_](https://twitter.com/lopezobrador_)
-1.  [@lopezobrador_](https://twitter.com/Claudiashein)
+1.  [@Claudiashein](https://twitter.com/Claudiashein)
 1.  [@Hans2412](https://twitter.com/Hans2412)
 1.  [@VicenteFoxQue](https://twitter.com/VicenteFoxQue)
 1.  [@rynram](https://twitter.com/rynram)
 
-Análisis del comportamiento temporal de publicación de Tweets.
+## Análisis del comportamiento temporal de publicación de Tweets.
 
 ![temporal](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
 
-Hashtags más frecuentes.
+## Hashtags más frecuentes.
 
 ![hashtags](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
 
-Palabras más frecuentes.
+## Palabras más frecuentes.
 
 ![words](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
 
-Usuarios que más publicaron.
+## Usuarios que más publicaron.
 
 1.  [@SinEmbargoMX](https://twitter.com/SinEmbargoMX)
 1.  [@ZuritaCarpio](https://twitter.com/ZuritaCarpio)
