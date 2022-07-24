@@ -14,6 +14,17 @@ categories: analisis
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.renderers.parallelEdges.min_.js"></script>
   
 
+  <section class="node-container">
+    <div id="graph-container" class="nodes" style="width:100%;">
+      <div id="selected-nodes"></div>
+      <div class="node-controls">
+      <datalist id="nodes-datalist"></datalist>
+        <button type="button" id="zoom-in-button" class="zoom-button zoom-in">+</button>
+        <button type="button" id="zoom-out-button" class="zoom-button zoom-out">-</button>
+      </div>
+    </div>
+  </section>
+
 Número de tweets: 153554
 Número de nodos: 81838 [550]
 Número de enlaces: 233269 [3805]
@@ -25,19 +36,6 @@ Top:
 1.  VicenteFoxQue
 1.  rynram
 
-![red](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/net.jpg){: width="200%" }
-
-  <section class="node-container">
-    <div id="graph-container" class="nodes" style="width:100%;">
-      <div id="selected-nodes"></div>
-      <div class="node-controls">
-      <datalist id="nodes-datalist"></datalist>
-        <button type="button" id="zoom-in-button" class="zoom-button zoom-in">+</button>
-        <button type="button" id="zoom-out-button" class="zoom-button zoom-out">-</button>
-      </div>
-    </div>
-  </section>
-  
 Análisis del comportamiento temporal de publicación de Tweets.
 
 ![temporal](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
@@ -73,8 +71,8 @@ Usuarios que más publicaron.
   display: flex;
   flex-direction: column-reverse;
   padding: 0 20px;
-  height: 800px;
-  width: 800px
+  height: 600px;
+  width: 600px
 }
 
 @media only screen and (min-width: 800px) {
