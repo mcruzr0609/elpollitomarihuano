@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Análisis de twitter política MX [2022-07-23]"
+title:  "Análisis de twitter política MX [2022-07-24]"
 date:   2022-07-23 12:58:29
 categories: analisis
 ---
