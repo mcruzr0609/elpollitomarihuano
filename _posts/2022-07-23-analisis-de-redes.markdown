@@ -13,19 +13,60 @@ categories: analisis
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.parsers.gexf_.min_.js"></script>
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.renderers.parallelEdges.min_.js"></script>
   
+
+Número de tweets: 153554
+Número de nodos: 81838 [550]
+Número de enlaces: 233269 [3805]
+
+Top:
+1.  lopezobrador_
+1.  Claudiashein
+1.  Hans2412
+1.  VicenteFoxQue
+1.  rynram
+
+![red](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/net.jpg){: width="200%" }
+
   <section class="node-container">
     <div id="graph-container" class="nodes" style="width:100%;">
       <div id="selected-nodes"></div>
       <div class="node-controls">
-        <div class="search-container">
-        <input id="search-input" list="nodes-datalist" placeholder="Search for a node">
-      </div>
       <datalist id="nodes-datalist"></datalist>
         <button type="button" id="zoom-in-button" class="zoom-button zoom-in">+</button>
         <button type="button" id="zoom-out-button" class="zoom-button zoom-out">-</button>
       </div>
     </div>
   </section>
+  
+Análisis del comportamiento temporal de publicación de Tweets.
+
+![temporal](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
+
+Hashtags más frecuentes.
+
+![hashtags](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
+
+Palabras más frecuentes.
+
+![words](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
+
+Usuarios que más publicaron.
+
+1.  SinEmbargoMX
+1.  ZuritaCarpio
+1.  TatsumiJorge
+1.  ELBOTE
+1.  AntilopeMalo
+1.  octaviorabago
+1.  inkertatis
+1.  lopezdoriga
+1.  mario_dico50
+1.  sinnosotrosnoh1
+1.  lajornadaonline
+1.  AaronCo12297111
+
+
+
 
 <style> 
 .node-container {
@@ -203,44 +244,3 @@ var selected = [];
       });
     }
 </script>
-
-
-Número de tweets: 153554
-Número de nodos: 81838 [550]
-Número de enlaces: 233269 [3805]
-
-Top:
-1.  lopezobrador_
-1.  Claudiashein
-1.  Hans2412
-1.  VicenteFoxQue
-1.  rynram
-
-![red](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/net.jpg){: width="200%" }
-
-Análisis del comportamiento temporal de publicación de Tweets.
-
-![temporal](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
-
-Hashtags más frecuentes.
-
-![hashtags](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
-
-Palabras más frecuentes.
-
-![words](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
-
-Usuarios que más publicaron.
-
-1.  SinEmbargoMX
-1.  ZuritaCarpio
-1.  TatsumiJorge
-1.  ELBOTE
-1.  AntilopeMalo
-1.  octaviorabago
-1.  inkertatis
-1.  lopezdoriga
-1.  mario_dico50
-1.  sinnosotrosnoh1
-1.  lajornadaonline
-1.  AaronCo12297111
