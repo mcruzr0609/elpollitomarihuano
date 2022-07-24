@@ -195,7 +195,7 @@ layout: default
     });
   
   // Load data to the graph
-      sigma.parsers.gexf('../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/net.gexf', s,
+      sigma.parsers.gexf('../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
         function (s) {
           s.refresh();
           populateSearchList(s.graph.nodes());
