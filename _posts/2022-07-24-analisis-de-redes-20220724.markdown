@@ -39,15 +39,15 @@ Top:
 
 ## Análisis del comportamiento temporal de publicación de Tweets.
 
-![temporal](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
+![temporal](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
 
 ## Hashtags más frecuentes.
 
-![hashtags](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
+![hashtags](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
 
 ## Palabras más frecuentes.
 
-![words](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
+![words](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
 
 ## Usuarios que más publicaron.
 
@@ -219,7 +219,7 @@ var selected = [];
   });
 
 // Load data to the graph
-    sigma.parsers.gexf('../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
+    sigma.parsers.gexf('../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
       function (s) {
         s.refresh();
 

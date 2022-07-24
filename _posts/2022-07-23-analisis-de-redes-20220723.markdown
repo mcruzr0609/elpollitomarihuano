@@ -39,33 +39,21 @@ Top:
 
 ## Análisis del comportamiento temporal de publicación de Tweets.
 
-![temporal](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
+![temporal](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
 
 ## Hashtags más frecuentes.
 
-![hashtags](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
+![hashtags](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
 
 ## Palabras más frecuentes.
 
-![words](../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
+![words](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
 
 ## Usuarios que más publicaron.
 
 1.  [@SinEmbargoMX](https://twitter.com/SinEmbargoMX)
 1.  [@ZuritaCarpio](https://twitter.com/ZuritaCarpio)
 1.  [@TatsumiJorge](https://twitter.com/TatsumiJorge)
-1.  [@ELBOTE](https://twitter.com/ELBOTE)
-1.  [@AntilopeMalo](https://twitter.com/AntilopeMalo)
-1.  [@octaviorabago](https://twitter.com/octaviorabago)
-1.  [@inkertatis](https://twitter.com/inkertatis)
-1.  [@lopezdoriga](https://twitter.com/lopezdoriga)
-1.  [@mario_dico50](https://twitter.com/mario_dico50)
-1.  [@sinnosotrosnoh1](https://twitter.com/sinnosotrosnoh1)
-1.  [@lajornadaonline](https://twitter.com/lajornadaonline)
-1.  [@AaronCo12297111](https://twitter.com/AaronCo12297111)
-
-
-
 
 <style> 
 .node-container {
@@ -219,7 +207,7 @@ var selected = [];
   });
 
 // Load data to the graph
-    sigma.parsers.gexf('../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
+    sigma.parsers.gexf('../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
       function (s) {
         s.refresh();
 
