@@ -8,6 +8,7 @@ categories: analisis
   <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
   <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="../../../css/grafo.css" />
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.min_.js"></script>
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.parsers.gexf_.min_.js"></script>
@@ -55,107 +56,6 @@ Top:
 1.  [@ZuritaCarpio](https://twitter.com/ZuritaCarpio)
 1.  [@TatsumiJorge](https://twitter.com/TatsumiJorge)
 
-<style> 
-.node-container {
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 0 20px;
-  height: 800px;
-  max-width: calc(2048px - (#{$spacing-unit} * 2));
-}
-
-@media only screen and (min-width: 800px) {
-  .node-container {
-    flex-direction: row;
-    padding: 0 50px;
-  }
-}
-
-.node-container #context-container {
-  flex: 1;
-  color: #dffcff;
-  background-color: #222a2a;
-  max-width: 100%;
-  border-radius: 20px;
-}
-
-.node-container #context-container h4 {
-  margin-top: 0;
-}
-
-.node-container #context-container .simplebar-scrollbar:before {
-  background-color: #fff;
-}
-
-.node-container #context-container #context-wrapper {
-  max-height: 85vh;
-  padding: 20px;
-}
-
-.node-container .simplebar-vertical {
-  margin: 10px 5px;
-}
-
-.node-container .nodes {
-  flex: 2;
-}
-
-.node-container #graph-container .node-controls {
-  display: flex;
-  flex-direction: column;
-  float: right;
-}
-
-.node-container #graph-container input {
-  color: #222a2a;
-  border: none;
-  height: 34px;
-  position: relative;
-  padding: 0 10px;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.node-container #selected-nodes {
-  position: absolute;
-  z-index: 10;
-  padding-top: 40px;
-}
-@media only screen and (min-width: 600px) {
-  .node-container #selected-nodes {
-    padding-top: 0px;
-  }
-}
-
-.node-container #selected-nodes .selected-node {
-  background-color: #222a2a;
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin: 5px;
-  color: #fff;
-}
-
-.node-container .zoom-button {
-  position: relative;
-  cursor: pointer;
-  z-index: 10;
-  color: #222a2a;
-  background-color: rgba(255, 255, 255, 0.8);
-  font-size: 20px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #222a2a;
-  align-self: flex-end;
-  width: 35px;
-  height: 35px;
-}
-
-.node-container .zoom-button:hover {
-  color: #2e3838;
-  background-color: #dffcff;
-}
-
-</style>
 
 <script>
 var selected = [];
