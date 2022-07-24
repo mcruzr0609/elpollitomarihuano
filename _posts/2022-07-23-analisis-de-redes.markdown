@@ -16,7 +16,7 @@ Top:
 1.  VicenteFoxQue
 1.  rynram
 
-![red](../assets/img/posts/2022-07-23/net.jpg)
+![red](../assets/img/posts/2022-07-23/net.jpg){: width="200%" }
 
 Análisis del comportamiento temporal de publicación de Tweets.
 
