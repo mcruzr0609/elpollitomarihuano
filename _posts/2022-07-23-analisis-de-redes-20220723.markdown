@@ -60,8 +60,8 @@ Top:
   display: flex;
   flex-direction: column-reverse;
   padding: 0 20px;
-  height: 600px;
-  width: 600px
+  height: 800px;
+  max-width: calc(2048px - (#{$spacing-unit} * 2));
 }
 
 @media only screen and (min-width: 800px) {
