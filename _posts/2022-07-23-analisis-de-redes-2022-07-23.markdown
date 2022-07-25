@@ -13,7 +13,6 @@ categories: analisis
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.min_.js"></script>
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.parsers.gexf_.min_.js"></script>
   <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.renderers.parallelEdges.min_.js"></script>
-  <script src="../../../assets/js/settings_net.js"></script>
 
   <section class="node-container">
     <div id="graph-container" class="nodes" style="width:100%;">
@@ -97,7 +96,7 @@ Top:
         minArrowSize: 10
       },
   });
-  
+
 // Load data to the graph
     sigma.parsers.gexf('../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
       function (s) {
