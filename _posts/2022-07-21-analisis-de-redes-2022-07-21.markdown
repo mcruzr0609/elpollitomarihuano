@@ -1,0 +1,141 @@
+---
+layout: post
+title:  "Análisis de twitter política MX [2022-07-21]"
+date:   2022-07-21 08:30:00
+categories: analisis
+---
+
+  <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+  <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="../../../css/grafo.css" />
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.min_.js"></script>
+  <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.parsers.gexf_.min_.js"></script>
+  <script src="https://virtual-alchemist.com/wp-content/uploads/2020/01/sigma.renderers.parallelEdges.min_.js"></script>
+  
+
+  <section class="node-container">
+    <div id="graph-container" class="nodes" style="width:100%;">
+      <div id="selected-nodes"></div>
+      <div class="node-controls">
+      <datalist id="nodes-datalist"></datalist>
+        <button type="button" id="zoom-in-button" class="zoom-button zoom-in">+</button>
+        <button type="button" id="zoom-out-button" class="zoom-button zoom-out">-</button>
+      </div>
+    </div>
+  </section>
+<br>
+
+Número de tweets: 258259 \
+Número de nodos: 115034 [545] \
+Número de enlaces: 397759 [5135] \
+
+Top:
+1.	[@lopezobrador_](https://twitter.com/lopezobrador_)
+1.	[@rynram](https://twitter.com/rynram)
+1.	[@VicenteFoxQue](https://twitter.com/VicenteFoxQue)
+1.	[@Hans2412](https://twitter.com/Hans2412)
+1.	[@_VicenteSerrano](https://twitter.com/_VicenteSerrano)
+
+## Análisis del comportamiento temporal de publicación de Tweets.
+
+![temporal](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/temporal.jpg)
+
+## Hashtags más frecuentes.
+
+![hashtags](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/hashtags.jpg)
+
+## Palabras más frecuentes.
+
+![words](../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/words.jpg)
+
+## Usuarios que más publicaron.
+
+1.	[@SinEmbargoMX](https://twitter.com/SinEmbargoMX)
+1.	[@perfildehugo](https://twitter.com/perfildehugo)
+1.	[@ZuritaCarpio](https://twitter.com/ZuritaCarpio)
+1.	[@maudi61](https://twitter.com/maudi61)
+1.	[@LesstattVampir1](https://twitter.com/LesstattVampir1)
+1.	[@_VicenteSerrano](https://twitter.com/_VicenteSerrano)
+1.	[@AristeguiOnline](https://twitter.com/AristeguiOnline)
+1.	[@lajornadaonline](https://twitter.com/lajornadaonline)
+1.	[@EmetHayahid](https://twitter.com/EmetHayahid)
+1.	[@Reforma](https://twitter.com/Reforma)
+1.	[@ElMaxideMexico](https://twitter.com/ElMaxideMexico)
+1.	[@PAKOT99419658](https://twitter.com/PAKOT99419658)
+
+<script>
+var selected = [];
+
+  MiniBarOptions = {
+    barType: "default",
+    minBarSize: 100,
+    alwaysShowBars: true,
+  };
+
+  sigma.classes.graph.addMethod('neighbors', function (nodeId) {
+    var k,
+      neighbors = {},
+      index = this.allNeighborsIndex[nodeId] || {};
+
+    for (k in index)
+      neighbors[k] = this.nodesIndex[k];
+
+    return neighbors;
+  });
+
+// Initialise sigma with settings
+  var s = new sigma({
+    renderers: [
+      {
+        type: 'canvas',
+        container: document.getElementById('graph-container'),
+        freeStyle: true
+      }
+    ],
+    settings: {
+      minNodeSize: .1,
+      maxNodeSize: 2,
+      minEdgeSize: 0.1,
+      maxEdgeSize: 0.5,
+      defaultEdgeType: "curve", // only works on canvas renderer
+      minArrowSize: 3,
+      //labelColor: "node",
+      labelHoverBGColor: "default",
+      defaultHoverLabelBGColor: "#171c1c",
+      defaultLabelHoverColor: "#fff",
+      font: "Poppins",
+      drawLabels: true,
+      mouseWheelEnabled: true,
+      doubleClickEnabled: true,
+      touchEnabled: true,
+      labelThreshold: 2
+    },
+  });
+
+// Load data to the graph
+    sigma.parsers.gexf('../../../assets/posts/{{ page.date | date: "%Y-%m-%d" }}/filter_net.gexf', s,
+      function (s) {
+        s.refresh();
+
+        var zoomInButton = document.getElementById('zoom-in-button');
+        zoomInButton.addEventListener("click", zoomIn);
+        var zoomOutButton = document.getElementById('zoom-out-button');
+        zoomOutButton.addEventListener("click", zoomOut);
+      });
+
+    function zoomIn() {
+      var c = s.camera;
+      c.goTo({
+        ratio: c.ratio / c.settings('zoomingRatio')
+      });
+    }
+
+    function zoomOut() {
+      var c = s.camera;
+      c.goTo({
+        ratio: c.ratio * c.settings('zoomingRatio')
+      });
+    }
+</script>
