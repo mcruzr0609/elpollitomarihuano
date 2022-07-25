@@ -1,5 +1,5 @@
 // Initialise sigma with settings
-var s = new sigma({
+export var s = new sigma({
     renderers: [
       {
         type: 'canvas',
