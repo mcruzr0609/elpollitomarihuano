@@ -22,7 +22,6 @@ categories: analisis
   #chart-wrapper {
     display: inline-block;
     position: relative;
-    width: 100%;
     height: 800px;
   }
 </style>
