@@ -18,6 +18,14 @@ categories: analisis
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js" integrity="sha256-cRtVj62HOT1M3EGc+4EBacU/38hYsYrNBB48zEVn8uU=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+<style>
+  #chart-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+</style>
+
 <section class="node-container">
     <div id="graph-container" class="nodes" style="width:100%;">
       <div id="selected-nodes"></div>
@@ -32,7 +40,7 @@ categories: analisis
 
 ## Test.
 
-<div class="chart-container" style="position: relative; height:40vh; width:80vw">
+<div id="chart-wrapper">
 		<canvas id="myChart"></canvas>
 </div>
 <p>
