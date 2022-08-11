@@ -57,14 +57,10 @@ const myChart = new Chart(ctx, {
             wheel: {
               enabled: true,
             },
-            limits: {
-              y: {min: 0, max: 10},
-              x: {min: 0, max: 5}
-            },
             pinch: {
               enabled: true
             },
-            mode: 'xy'
+            mode: 'x'
           }
         }
       }
