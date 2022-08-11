@@ -17,12 +17,6 @@ categories: analisis
   <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js" integrity="sha256-cRtVj62HOT1M3EGc+4EBacU/38hYsYrNBB48zEVn8uU=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  
-<style>
-  .reset-zoom {
-    display: none;
-}
-</style>
 
 <section class="node-container">
     <div id="graph-container" class="nodes" style="width:100%;">
@@ -39,7 +33,7 @@ categories: analisis
 ## Test.
 
 <canvas id="myChart" width="400" height="400"></canvas>
-<button id="reset_zoom" class="reset-zoom">
+<button id="reset_zoom">
     Reset zoom
 </button>
 
