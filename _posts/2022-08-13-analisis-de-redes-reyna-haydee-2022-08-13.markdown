@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Análisis de twitter política MX [2022-07-23]"
-date:   2022-07-23 08:30:00
+title:  "Análisis de twitter Reyna Haydee"
+date:   2022-08-13 08:30:00
 categories: analisis
 ---
 
@@ -54,7 +54,7 @@ categories: analisis
         touchEnabled: true,
         labelThreshold: 1,
         labelSize: "proportional",
-        labelSizeRatio: 2,
+        labelSizeRatio: 6,
         minArrowSize: 10
       },
   });
