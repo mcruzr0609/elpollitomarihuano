@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Análisis de twitter Reyna Haydee"
-date:   2022-08-13 08:30:00
+date:   2022-08-10 08:30:00
 categories: analisis
 ---
 
