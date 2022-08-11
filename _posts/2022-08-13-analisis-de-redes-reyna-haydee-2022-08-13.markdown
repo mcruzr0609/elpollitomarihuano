@@ -52,7 +52,7 @@ categories: analisis
         mouseWheelEnabled: true,
         doubleClickEnabled: true,
         touchEnabled: true,
-        labelThreshold: 5,
+        labelThreshold: 3,
         labelSize: "proportional",
         labelSizeRatio: 2,
         minArrowSize: 10
