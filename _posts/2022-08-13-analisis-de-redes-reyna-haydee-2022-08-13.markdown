@@ -53,6 +53,7 @@ const myChart = new Chart(ctx, {
         }]
     },
     options: {
+      responsive: true,
       title: {
         display: true,
         text: 'Data labels plugin sample'
@@ -82,7 +83,7 @@ const myChart = new Chart(ctx, {
           x: 20000
         },
         rangeMin: {
-          x: 1000
+          x: 100
         }
       }
     }
