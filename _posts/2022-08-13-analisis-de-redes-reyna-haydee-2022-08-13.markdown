@@ -50,18 +50,37 @@ const myChart = new Chart(ctx, {
             tension: 0.1
         }]
     },
-  options: {
-      plugins: {
-        zoom: {
-          zoom: {
-            wheel: {
-              enabled: true,
-            },
-            pinch: {
-              enabled: true
-            },
-            mode: 'x'
-          }
+    options: {
+      title: {
+        display: true,
+        text: 'Data labels plugin sample'
+      },
+      tooltips: {
+        mode: 'nearest',
+        intersect: false
+      },
+      hover: {
+        mode: 'nearest',
+        intersect: false
+      },
+      pan: {
+        enabled: true,
+        mode: 'x',
+        rangeMax: {
+          x: 4000
+        },
+        rangeMin: {
+          x: 0
+        }
+      },
+      zoom: {
+        enabled: true,
+        mode: 'x',
+        rangeMax: {
+          x: 20000
+        },
+        rangeMin: {
+          x: 1000
         }
       }
     }
