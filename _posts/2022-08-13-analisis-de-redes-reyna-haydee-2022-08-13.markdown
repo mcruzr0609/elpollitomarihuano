@@ -23,6 +23,7 @@ categories: analisis
     display: inline-block;
     position: relative;
     width: 100%;
+    height: 800px;
   }
 </style>
 
@@ -40,12 +41,14 @@ categories: analisis
 
 ## Test.
 
-<div id="chart-wrapper">
-		<canvas id="myChart"></canvas>
+<div>
+  <div id="chart-wrapper">
+      <canvas id="myChart"></canvas>
+  </div>
+  <p>
+      <button id="reset_zoom">Reset Zoom</button>
+  </p>
 </div>
-<p>
-		<button id="reset_zoom">Reset Zoom</button>
-</p>
 
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
@@ -88,7 +91,7 @@ const myChart = new Chart(ctx, {
         enabled: true,
         mode: 'x',
         rangeMax: {
-          x: 20000
+          x: 2000
         },
         rangeMin: {
           x: 100
