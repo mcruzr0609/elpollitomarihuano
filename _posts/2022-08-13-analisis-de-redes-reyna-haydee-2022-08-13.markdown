@@ -32,10 +32,12 @@ categories: analisis
 
 ## Test.
 
-<canvas id="myChart" width="400" height="400"></canvas>
-<button id="reset_zoom">
-    Reset zoom
-</button>
+<div class="chart-container" style="position: relative; height:40vh; width:80vw">
+		<canvas id="myChart"></canvas>
+</div>
+<p>
+		<button id="reset_zoom">Reset Zoom</button>
+</p>
 
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
