@@ -69,10 +69,7 @@ const myChart = new Chart(ctx, {
             pinch: {
               enabled: true
             },
-            mode: 'xy',
-            onZoomComplete: function(myChart) {
-              $('#reset_zoom').show();
-            }
+            mode: 'xy'
           }
         }
       }
@@ -81,7 +78,6 @@ const myChart = new Chart(ctx, {
 
 $('#reset_zoom').click(function(){
     myChart.resetZoom(); 
-    $('#reset_zoom').hide();
 });
 </script>
 
