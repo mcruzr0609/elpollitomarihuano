@@ -16,8 +16,14 @@ categories: analisis
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" integrity="sha256-+8RZJua0aEWg+QVVKg4LEzEEm/8RFez5Tb4JBNiV5xA=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.2.1/dist/chartjs-plugin-zoom.min.js" integrity="sha256-cRtVj62HOT1M3EGc+4EBacU/38hYsYrNBB48zEVn8uU=" crossorigin="anonymous"></script>
-  
-  <section class="node-container">
+
+<style>
+  .reset-zoom {
+    display: none;
+}
+</style>
+
+<section class="node-container">
     <div id="graph-container" class="nodes" style="width:100%;">
       <div id="selected-nodes"></div>
       <div class="node-controls">
@@ -32,6 +38,10 @@ categories: analisis
 ## Test.
 
 <canvas id="myChart" width="400" height="400"></canvas>
+<button id="reset_zoom" class="reset-zoom">
+    Reset zoom
+</button>
+
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
@@ -52,14 +62,26 @@ const myChart = new Chart(ctx, {
             wheel: {
               enabled: true,
             },
+            limits: {
+              y: {min: 0, max: 10},
+              x: {min: 0, max: 5}
+            },
             pinch: {
               enabled: true
             },
             mode: 'xy',
+            onZoomComplete: function(myChart) {
+              $('#reset_zoom').show();
+            }
           }
         }
       }
     }
+});
+
+$('#reset_zoom').click(function(){
+    myChart.resetZoom(); 
+    $('#reset_zoom').hide();
 });
 </script>
 
