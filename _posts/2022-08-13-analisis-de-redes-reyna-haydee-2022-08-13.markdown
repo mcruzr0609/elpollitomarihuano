@@ -41,14 +41,14 @@ categories: analisis
 
 ## Test.
 
-<div>
+
   <div id="chart-wrapper">
       <canvas id="myChart"></canvas>
   </div>
   <p>
       <button id="reset_zoom">Reset Zoom</button>
   </p>
-</div>
+
 
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
@@ -81,7 +81,7 @@ const myChart = new Chart(ctx, {
         enabled: true,
         mode: 'x',
         rangeMax: {
-          x: 4000
+          x: 400
         },
         rangeMin: {
           x: 0
@@ -91,10 +91,10 @@ const myChart = new Chart(ctx, {
         enabled: true,
         mode: 'x',
         rangeMax: {
-          x: 2000
+          x: 200
         },
         rangeMin: {
-          x: 100
+          x: 10
         }
       }
     }
