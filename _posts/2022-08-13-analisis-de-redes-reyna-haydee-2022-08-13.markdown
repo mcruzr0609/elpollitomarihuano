@@ -54,7 +54,7 @@ categories: analisis
         touchEnabled: true,
         labelThreshold: 5,
         labelSize: "proportional",
-        labelSizeRatio: 1,
+        labelSizeRatio: 2,
         minArrowSize: 10
       },
   });
